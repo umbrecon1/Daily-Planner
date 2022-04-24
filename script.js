@@ -5,10 +5,12 @@ function makeTimeblocks(hour, existingTodo = "") {
     var presentPastOrFuture = "future";
     if (currentHour > hour + 9) presentPastOrFuture = "past";
     if (currentHour === hour + 9) presentPastOrFuture = "present";
+    var hourName = hours[hour];
+    var existingTodo = localStorage.getItem();
     $(".container").append($(`
     <div class="row time-block">
-        <div class="hour col-1">${hours[hour]}</div>
-        <textarea name="" id="${hours[hour]}" cols="30" rows="3" class="description col-9 ${presentPastOrFuture}">${existingTodo}</textarea>
+        <div class="hour col-1">${hourName}</div>
+        <textarea name="" id="${hourName}" cols="30" rows="3" class="description col-9 ${presentPastOrFuture}">${existingTodo}</textarea>
         <button class="btn saveBtn col-2">Save</button>
     </div>`));
 }
