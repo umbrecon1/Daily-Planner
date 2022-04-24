@@ -11,3 +11,5 @@ When the user inputs the Todos per hour,
 the application saves the input from the user to use throughout the day.
 
 ![screenshot](screenshot.png)
+
+Deployed Site: https://umbrecon1.github.io/Daily-Planner/
