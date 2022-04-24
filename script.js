@@ -6,7 +6,7 @@ function makeTimeblocks(hour, existingTodo = "") {
     if (currentHour > hour + 9) presentPastOrFuture = "past";
     if (currentHour === hour + 9) presentPastOrFuture = "present";
     var hourName = hours[hour];
-    var existingTodo = localStorage.getItem();
+    var existingTodo = localStorage.getItem(hourName);
     $(".container").append($(`
     <div class="row time-block">
         <div class="hour col-1">${hourName}</div>
