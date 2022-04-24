@@ -24,6 +24,11 @@ for (i = 0; i < btns.length; i++) {
 }
 
 function clickSave(event) {
-    var todo = (event.target.parentNode.children[1].value);
+    var todoValue = (event.target.parentNode.children[1].value);
+    var todoKey = event.target.parentNode.children[1].id;
+
+    console.log("key values", todoKey, todoValue);
+
+    localStorage.setItem(todoKey, todoValue);
 }
 
